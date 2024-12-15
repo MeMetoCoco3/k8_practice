@@ -1,0 +1,15 @@
+# kubectl port-forward service/web-service 8080:80
+apiVersion: v1
+kind: Service
+metadata:
+  name: web-service
+spec:
+  selector:
+    app: synergychat-web
+  ports:
+    - protocol:
+    # Listens on 
+      port: 80
+    # Forwards traffic to
+      targetPort: 8080
+    
